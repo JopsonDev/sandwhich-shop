@@ -8,8 +8,8 @@ public class SandwhichShop {
 
         System.out.print("Would you Like a regular or large sandwhich? ");
         String input = shop.nextLine();
-        //System.out.print("Would you like to make it loaded? ");
-        //String loaded = shop.nextLine();
+        System.out.print("Would you like to make it loaded? ");
+        String loaded = shop.nextLine();
         System.out.print("Great! and your age? ");
         int age = shop.nextInt();
         int size = (input.equalsIgnoreCase("regular")) ? 1 : input.equalsIgnoreCase("large") ? 2: 0;
@@ -30,15 +30,15 @@ public class SandwhichShop {
         } else {
             discount = 1;
         }
-/*        double extra;
+       double extra;
         if (loaded.equalsIgnoreCase("yes") && size == 1) {
             extra = 1.00;
         } else if (loaded.equalsIgnoreCase("yes") && size == 2) {
             extra = 1.75;
         } else {
             extra = 0;
-        }*/
-        price = price * discount;
+        }
+        price = (price + extra) * discount;
         System.out.printf("Your total comes too: %.2f", price);
     }
 }
